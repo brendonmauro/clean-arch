@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Models.AddCustomer;
 
 namespace WebApi.Controllers
 {
@@ -10,7 +11,8 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult AddCustomer(AddCustomerInput input)
         {
-
+            // Call use case to add customer
+            return Created("", input);
         }
     }
 }
